@@ -6,7 +6,7 @@ const nextConfig = {
   images: {
     disableStaticImages: true
   },
-  basePath: process.env.NODE_ENV == 'production' ? '/mockupyour.app' : ''
+  basePath: '/mockupyour.app' // process.env.NODE_ENV == 'production' ? '/mockupyour.app' : ''
 };
 
 module.exports = withPlugins(
