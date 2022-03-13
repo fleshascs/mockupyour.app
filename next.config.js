@@ -5,7 +5,8 @@ const nextConfig = {
   env: require('./site.config'),
   images: {
     disableStaticImages: true
-  }
+  },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/mockupyour.app' : ''
 };
 
 module.exports = withPlugins(
