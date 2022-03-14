@@ -2,10 +2,10 @@ import React from 'react';
 
 // interface ImageProps extends Omit<React.HTMLProps<HTMLImageElement>, 'crossOrigin'> Required< {
 export interface ImageProps
-  extends Required<Pick<React.HTMLProps<HTMLImageElement>, 'src' | 'alt' | 'width' | 'height'>>,
-    Pick<React.HTMLProps<HTMLImageElement>, 'title' | 'className'> {
+  extends Required<Pick<React.HTMLProps<HTMLImageElement>, 'src' | 'alt' | 'width' | 'height'>> {
   src: string;
   webp: string;
+  title?: string;
   className?: string;
   loading?: 'eager' | 'lazy' | undefined;
   imgClassName?: string;
