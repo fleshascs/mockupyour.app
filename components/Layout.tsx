@@ -1,12 +1,8 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-type Props = {
-  children: React.ReactNode;
-};
-
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       {/* <picture>
