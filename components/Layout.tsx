@@ -8,7 +8,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <picture>
+      {/* <picture>
         <source
           media='(max-width: 999px)'
           srcSet='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=='
@@ -28,7 +28,7 @@ const Layout = ({ children }: Props) => {
           alt='Counter-Strike 1.6'
           className='absolute inset-x-0 top-0 z-[-1] w-full hidden lg:block'
         />
-      </picture>
+      </picture> */}
       <NavBar />
       <div className='relative main'>
         <main className='min-h-screen container pt-6'>{children}</main>
