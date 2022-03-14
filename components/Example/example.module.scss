@@ -1,0 +1,73 @@
+.container {
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .canvas {
+  height: 700px;
+  width: 100%;
+}
+
+.container .settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+.container .settings .colors,
+.container .settings .dropzone {
+  position: absolute;
+  pointer-events: all;
+}
+.container .settings .colors {
+  right: 0;
+}
+.container .settings .dropzone {
+  width: 320px;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .container .settings {
+    position: relative;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .container .settings .colors,
+  .container .settings .dropzone {
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
+  .container .settings {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .container .settings .colors,
+  .container .settings .dropzone {
+    margin-top: 2rem;
+  }
+}
+.container canvas:hover {
+  cursor: grab;
+}
+
+.canvas {
+  height: 700px;
+  width: 100%;
+}
+
+// export const container = "container";
+// export const canvas = "canvas";
+
+// export const settings = "settings";
+// export const colors = "colors";
+// export const dropzone = "dropzone";

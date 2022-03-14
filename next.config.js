@@ -1,15 +1,15 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
 
-const PREFIX = process.env.GH_PAGES ? '/mockupyour.app' : '';
+const config = require('./site.config');
 
 const nextConfig = {
-  env: require('./site.config'),
+  env: config,
   images: {
     disableStaticImages: true
   },
-  assetPrefix: PREFIX,
-  basePath: PREFIX
+  assetPrefix: config.basePath,
+  basePath: config.basePath
 };
 
 module.exports = withPlugins(

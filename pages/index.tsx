@@ -1,6 +1,7 @@
 import DownloadRow from '../components/DownloadRow';
 import { RowThumbnail } from '../components/RowThumbnail';
 import { ratingSchema } from '../components/utils';
+import Example from '../components/Example/Example';
 export default function Page() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function Page() {
         src={require('../images/game/header.jpg?resize&size=485')}
         webp={require('../images/game/header.jpg?resize&size=485&format=webp')}
       />
+      <Example />
     </>
   );
 }

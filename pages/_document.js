@@ -14,10 +14,10 @@ export default class Document extends NextDocument {
     return (
       <Html lang={this.props.lang}>
         <Head>
-          <meta name='theme-color' content='#000000' />
+          <meta name='theme-color' content='#ffffff' />
           <meta name='application-name' content={process.env.siteName} />
         </Head>
-        <body className='antialiased text-white'>
+        <body className='antialiased text-gray-500'>
           <Main />
           <NextScript />
           <script
