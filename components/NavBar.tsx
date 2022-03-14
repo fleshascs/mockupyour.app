@@ -9,28 +9,8 @@ const navigation = [
     href: '/'
   },
   {
-    name: 'CS 1.6 xtcs',
-    href: '/counter-strike-1.6-xtcs-download'
-  },
-  {
-    name: 'CS 1.6 torrent',
-    href: '/cs-1.6-torrent'
-  },
-  {
-    name: 'CS 1.6 protocol v48',
-    href: '/cs-1.6-48-protocol'
-  },
-  {
-    name: 'CS 1.6 44 patch',
-    href: '/cs-1.6-44-patch'
-  },
-  {
     name: 'CS 1.6 CSGO Mod',
     href: '/cs-1.6-csgo-mod'
-  },
-  {
-    name: 'CS 1.6 for Windows 10',
-    href: '/cs-1.6-windows-10'
   }
 ];
 export default function NavBar() {

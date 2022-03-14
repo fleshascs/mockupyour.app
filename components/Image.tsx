@@ -1,3 +1,5 @@
+import React from 'react';
+
 // interface ImageProps extends Omit<React.HTMLProps<HTMLImageElement>, 'crossOrigin'> Required< {
 export interface ImageProps
   extends Required<Pick<React.HTMLProps<HTMLImageElement>, 'src' | 'alt' | 'width' | 'height'>>,

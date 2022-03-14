@@ -51,17 +51,6 @@ export default function App({ Component, pageProps }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='canonical' href={canonicalURL} />
         <link rel='alternate' href={process.env.domain} hrefLang='en' />
-        <link rel='alternate' href={process.env.domain + '/pl'} hrefLang='pl' />
-        <link
-          rel='alternate'
-          href={process.env.domain + '/ru/counter-strike-download'}
-          hrefLang='ru'
-        />
-        <link rel='alternate' href={process.env.domain + '/ro'} hrefLang='ro' />
-        <link rel='alternate' href={process.env.domain + '/tr'} hrefLang='tr' />
-        <link rel='alternate' href={process.env.domain + '/sr'} hrefLang='sr' />
-        <link rel='alternate' href={process.env.domain + '/es'} hrefLang='es' />
-        <link rel='alternate' href={process.env.domain + '/mk'} hrefLang='mk' />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: buildBreadcrumbs(_title, router.pathname) }}
