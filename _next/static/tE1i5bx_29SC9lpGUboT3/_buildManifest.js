@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST={__rewrites:{beforeFiles:[],afterFiles:[],fallback:[]},"/":["static/chunks/pages/index-c4918c90b5d965e0.js"],"/_error":["static/chunks/pages/_error-2280fa386d040b66.js"],"/cs-1.6-csgo-mod":["static/chunks/pages/cs-1.6-csgo-mod-17dc47dcef3e9151.js"],sortedPages:["/","/_app","/_error","/cs-1.6-csgo-mod"]},self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();
