@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fleshascs.github.io/mockupyour.app
+
+# Sitemaps
+Sitemap: https://fleshascs.github.io/mockupyour.app/sitemap.xml
