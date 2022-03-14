@@ -6,8 +6,8 @@ const nextConfig = {
   images: {
     disableStaticImages: true
   },
-  basePath: '/mockupyour.app'
-  // basePath: process.env.GH_PAGES ? '/mockupyour.app' : ''
+  // basePath: '/mockupyour.app'
+  basePath: process.env.GH_PAGES ? '/mockupyour.app' : ''
   // basePath: process.env.NODE_ENV == 'production' ? '/mockupyour.app' : ''
 };
 
