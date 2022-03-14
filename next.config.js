@@ -7,8 +7,8 @@ const nextConfig = {
     disableStaticImages: true
   },
   // basePath: '/mockupyour.app'
-  assetPrefix: process.env.GH_PAGES ? '/mockupyour.app' : ''
-  // basePath: process.env.GH_PAGES ? '/mockupyour.app' : ''
+  assetPrefix: process.env.GH_PAGES ? '/mockupyour.app' : '',
+  basePath: process.env.GH_PAGES ? '/mockupyour.app' : ''
   // basePath: process.env.NODE_ENV == 'production' ? '/mockupyour.app' : ''
 };
 
