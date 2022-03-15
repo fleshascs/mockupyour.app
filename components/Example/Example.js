@@ -41,8 +41,14 @@ const Phone = ({ currentDevice }) => {
 
   //free light resources https://polyhaven.com/a/photo_studio_01
   // const envMap = useLoader(RGBELoader, '/3DModels/EnvMaps/photo_studio_01_4k.hdr')
-  const envMap = useLoader(RGBELoader, '/3DModels/EnvMaps/2photo_studio_01_1k.hdr');
-  const result = useLoader(GLTFLoader, '/3DModels/Phones/iphone_12/scene.gltf');
+  const envMap = useLoader(
+    RGBELoader,
+    process.env.basePath + '/3DModels/EnvMaps/2photo_studio_01_1k.hdr'
+  );
+  const result = useLoader(
+    GLTFLoader,
+    process.env.basePath + '/3DModels/Phones/iphone_12/scene.gltf'
+  );
   const { nodes, materials } = result;
 
   const center = React.useMemo(() => {
