@@ -37,10 +37,7 @@ export default function NavBar() {
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex-shrink-0 flex items-center'>
-                  <span
-                    className='hidden lg:block text-white'
-                    style={{ fontFamily: 'bauerg', fontSize: '1.4em' }}
-                  >
+                  <span className='hidden lg:block text-white' style={{ fontSize: '1.4em' }}>
                     {process.env.siteName}
                   </span>
                   {/* <img className='block lg:hidden h-10 w-auto' src='192x192.png' alt='Workflow' />

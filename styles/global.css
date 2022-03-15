@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: bauerg;
-  src: url('/fonts/Bauer.woff') format('truetype');
-}
-
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   /* background-color: #231913; */
