@@ -3,16 +3,15 @@ import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import clsx from 'clsx';
-import Image from './Image';
 
 const navigation = [
   {
     name: 'Demo',
-    href: '/'
+    href: process.env.basePath + '/'
   },
   {
     name: 'Templates',
-    href: '/templates'
+    href: process.env.basePath + '/templates'
   }
 ];
 
@@ -50,20 +49,20 @@ export default function NavBar() {
                     itemType='https://schema.org/SiteNavigationElement'
                   >
                     {navigation.map((item) => (
-                      <a
-                        itemProp='url'
-                        key={item.name}
-                        href={item.href}
-                        className={clsx(
-                          item.href === router.pathname
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.href === router.pathname ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                      <Link key={item.name} href={item.href}>
+                        <a
+                          itemProp='url'
+                          className={clsx(
+                            item.href === router.pathname
+                              ? 'bg-gray-900 text-white'
+                              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            'px-3 py-2 rounded-md text-sm font-medium'
+                          )}
+                          aria-current={item.href === router.pathname ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
