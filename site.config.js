@@ -4,7 +4,7 @@ const domain = process.env.GH_PAGES
   : 'http://localhost:3000';
 
 module.exports = {
-  siteName: '3D STUFF',
+  siteName: '3D Mockup',
   domain: domain,
   defaultTitle: 'mockup app',
   defaultDescription: 'description...',
