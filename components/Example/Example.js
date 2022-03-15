@@ -188,7 +188,7 @@ const PhoneExample = () => {
           <VideoCapture downloadEmitter={downloadEmitter.current} />
         </Canvas>
       </div>
-      <div className={styles.settings}>
+      {/* <div className={styles.settings}>
         <div className={styles.colors}>
           <CirclePicker
             color={color}
@@ -207,7 +207,7 @@ const PhoneExample = () => {
             Download
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

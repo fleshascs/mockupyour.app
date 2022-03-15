@@ -1,17 +1,55 @@
-import DownloadRow from '../components/DownloadRow';
-import { RowThumbnail } from '../components/RowThumbnail';
+// import DownloadRow from '../components/DownloadRow';
+// import { RowThumbnail } from '../components/RowThumbnail';
 import { ratingSchema } from '../components/utils';
 import Example from '../components/Example/Example';
+import { FC } from 'react';
+
+const Card: FC = () => {
+  return (
+    <div className='max-w-sm rounded overflow-hidden shadow-lg'>
+      <img
+        className='w-full'
+        src='https://v1.tailwindcss.com/img/card-top.jpg'
+        alt='Sunset in the mountains'
+      />
+      <div className='px-6 py-4'>
+        <div className='font-bold text-xl mb-2'>The Coldest Sunset</div>
+        <p className='text-gray-700 text-base'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+          Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div className='px-6 pt-4 pb-2'>
+        <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+          #photography
+        </span>
+        <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+          #travel
+        </span>
+        <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+          #winter
+        </span>
+      </div>
+    </div>
+  );
+};
+
 export default function Page() {
   return (
     <>
-      <DownloadRow lazy={false} />
+      {/* <DownloadRow lazy={false} />
 
       <RowThumbnail
         alt='original cs 1.6 game'
         src={require('../images/game/header.jpg?resize&size=485')}
         webp={require('../images/game/header.jpg?resize&size=485&format=webp')}
-      />
+      /> */}
+
+      <div className='grid grid-cols-4 gap-4'>
+        {Array.from({ length: 30 }, (_, i) => (
+          <Card />
+        ))}
+      </div>
       <Example />
     </>
   );
@@ -19,9 +57,8 @@ export default function Page() {
 
 Page.layoutProps = {
   meta: {
-    title: 'Download CS 1.6 | Free Counter-Strike 1.6 Full Version',
-    description:
-      'Discovered in 2003 as Counter-Strike 1.6 became one of the best known games ever made. Our  free CS 1.6 install ensures best gaming experience. This setup includes High FPS config and newest build version. The main game idea brings us to two agains each other fighting teams (Counter-Terrorists and Terrorists), both teams has their own unique weapons, it includes rifles, knifes and grenades.'
+    title: '3D mockup',
+    description: ''
   },
   schema: ratingSchema({ ratingValue: '4.7', ratingCount: '16864' })
 };
