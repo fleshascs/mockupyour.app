@@ -27,7 +27,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         />
       </picture> */}
       <NavBar />
-      <div className='relative main'>
+      <div className='relative main bg-slate-100'>
         <main className='min-h-screen container pt-6'>{children}</main>
       </div>
       <Footer />

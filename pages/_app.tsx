@@ -38,7 +38,11 @@ export default function App({ Component, pageProps }) {
         <meta property='og:description' content={_description} />
 
         <link rel='icon' href='/favicon.ico' type='image/x-icon' />
-        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+        <link
+          rel='shortcut icon'
+          href={process.env.basePath + '/favicon.ico'}
+          type='image/x-icon'
+        />
         <meta name='apple-mobile-web-app-title' content={process.env.siteName} />
         <meta name='application-name' content={process.env.siteName} />
         <meta name='msapplication-TileColor' content='#38bdf8' />
