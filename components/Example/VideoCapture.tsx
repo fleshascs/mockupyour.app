@@ -1,6 +1,7 @@
 import { useFrame, useThree } from '@react-three/fiber';
 import { saveAs } from 'file-saver';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { EditorContext } from '../Editor/EditorContext';
 // import { dataURItoBlob } from "../../../../Common/Functions";
 
 export function dataURItoBlob(dataURI) {
@@ -21,11 +22,14 @@ export function dataURItoBlob(dataURI) {
   return new Blob([ia], { type: mimeString });
 }
 
-const VideoCapture = ({ downloadEmitter }) => {
+const VideoCapture = () => {
   const { invalidate, gl, camera, set } = useThree();
 
+  const subjectContext = useContext(EditorContext);
+
   useEffect(() => {
-    downloadEmitter.onDownload = (format) => {
+    const sub = subjectContext?.subscribe((format) => {
+      alert(1);
       if (format === 'png') {
         console.log('gl.domElement.offsetWidth', gl.domElement.offsetWidth);
         console.log('gl.domElement.offsetHeight', gl.domElement.offsetHeight);
@@ -63,7 +67,11 @@ const VideoCapture = ({ downloadEmitter }) => {
           // );
         }, 500);
       }
-    };
+
+      return () => {
+        sub.unsubscribe();
+      };
+    });
   }, []);
 
   return null;

@@ -6,7 +6,7 @@ import clsx from 'clsx';
 
 const navigation = [
   {
-    name: 'Demo',
+    name: 'Home',
     href: process.env.basePath + '/'
   },
   {

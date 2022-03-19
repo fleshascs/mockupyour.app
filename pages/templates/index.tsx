@@ -1,10 +1,10 @@
 // import DownloadRow from '../components/DownloadRow';
 // import { RowThumbnail } from '../components/RowThumbnail';
-import { ratingSchema } from '../components/utils';
-import Example from '../components/Example/Example';
+import { ratingSchema } from '../../components/utils';
+import Example from '../../components/Example/Example';
 import { FC } from 'react';
 import Link from 'next/link';
-import { Col, Row } from '../components/Grid';
+import { Col, Row } from '../../components/Grid';
 
 interface CardProps {
   href: string;
@@ -56,37 +56,13 @@ export default function Page() {
         webp={require('../images/game/header.jpg?resize&size=485&format=webp')}
       /> */}
 
-      <Row>
-        <Col>
-          <img
-            // className='w-full'
-            className='m-auto max-w-[13rem]'
-            // src='https://v1.tailwindcss.com/img/card-top.jpg'
-            src='https://help.apple.com/assets/609C618CA267BE60B64DC908/609C618EA267BE60B64DC92B/en_US/10ba97490e779efa6a34465b160e24de.png'
-          />
-          {/* <RowThumbnail
-            alt='cs 1.6 global offensive mod'
-            src={require('../images/game/csgo_hd.jpg?resize&size=485')}
-            webp={require('../images/game/csgo_hd.jpg?resize&size=485&format=webp')}
-          /> */}
-        </Col>
-        <Col>
-          <h2 className='text-3xl pb-3'>Get started with a template</h2>
-          <p className='text-justify text-lg'>
-            All documents begin with a template—a model you can use as a starting point. You can
-            create word-processing documents, like reports and letters, and page layout documents,
-            like posters and newsletters. Simply replace the template text and images with your own
-            content.
-          </p>
-        </Col>
-      </Row>
       <h2 className='text-3xl pb-3'>Choose a template</h2>
       <div className='grid grid-cols-4 gap-4'>
         {Array.from({ length: 30 }, (_, i) => (
           <Card key={i} href='/templates/iphone-13-pro' />
         ))}
       </div>
-      {/* <Example /> */}
+      <Example />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import styles from './example.module.scss';
 import Image from '../Image';
-import React, { useMemo, useState, useRef } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { Suspense } from 'react';
 import { Canvas, useFrame, useLoader, useThree, extend } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -156,10 +156,7 @@ const Phone = ({ currentDevice }) => {
 const PhoneExample = () => {
   const [color, setColor] = React.useState('#000000');
   const [screenshot, setScreenshot] = React.useState(null);
-  const downloadEmitter = useRef({
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    onDownload: () => {}
-  });
+
   return (
     <div className={styles.container}>
       <div className={styles.canvas}>
@@ -185,7 +182,7 @@ const PhoneExample = () => {
             <Phone currentDevice={{ color, screenshot }} />
           </Suspense>
           <Orbit />
-          <VideoCapture downloadEmitter={downloadEmitter.current} />
+          <VideoCapture />
         </Canvas>
       </div>
       {/* <div className={styles.settings}>
