@@ -7,11 +7,11 @@ import clsx from 'clsx';
 const navigation = [
   {
     name: 'Home',
-    href: process.env.basePath + '/'
+    href: '/'
   },
   {
     name: 'Templates',
-    href: process.env.basePath + '/templates'
+    href: '/templates'
   }
 ];
 
